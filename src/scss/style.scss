@@ -1,1 +1,140 @@
-@import 'reset'
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+
+body {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1420px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  &__top-wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    background: $bg-color;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-social {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 147px;
+  }
+
+  &__nav {
+    display: grid;
+    align-items: center;
+  }
+
+  &__nav-burger {
+    width: 100%;
+    height: 100vh;
+    background: $bg-burger-menu;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+  }
+
+  &__nav-burger__list {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  &__nav-burger__item {
+    margin-bottom: 20px;
+  }
+
+  &__nav-close {
+    padding: 50px;
+  }
+
+  &__nav-burger__img {
+    display: inline-block;
+  }
+
+  &__nav-item {
+    margin-right: 24px;
+  }
+
+  &__nav-item:last-child {
+    margin-right: 0;
+  }
+
+  &__nav-burger__link,
+  &__nav-link {
+    color: $text-color;
+    transition: all .3s;
+  }
+
+  &__nav-link:hover {
+    color: $title-color;
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-item {
+    margin-right: 10px;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $text-color;
+    padding-top: 14px;
+  }
+
+  &__contacts-phone {
+    font-weight: bold;
+    font-size: 36px;
+    color: $title-color;
+  }
+
+  &__market {
+    display: flex;
+  }
+
+  &__market-link {
+    margin-right: 22px;
+  }
+
+  &__market-link:last-child {
+    margin-right: 0;
+  }
+}
+
+@import 'media';

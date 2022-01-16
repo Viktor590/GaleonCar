@@ -69,7 +69,7 @@ export const fontsStyle = () => {
               `@font-face {
                 font-family:${fontName};
                 font-display: swap;
-                src: url("../fonts/${fontFileName}.woff2") format("woff2", url("..fonts/${fontFileName}));
+                src: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}");
                 font-weight: ${fontWeight};
                 font-style: normal;
             }\r\n`, cb);
