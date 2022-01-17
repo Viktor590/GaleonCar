@@ -31,7 +31,6 @@ const headerSlider = (block, items, prev, next) => {
     const b = height * 0.40;
     const delta = Math.PI / slides.length / 4;
 
-    console.log(container.getBoundingClientRect());
     for (let i = 0; i < slides.length; i++) {
       const leftSlide = document.querySelector(`.header__slider-item[data-order="${activeSlide - i}"]`);
 
@@ -40,7 +39,7 @@ const headerSlider = (block, items, prev, next) => {
         leftSlide.style.opacity = 1 - (3 * i) / slides.length;
         leftSlide.style.left = `${width / 2 + a * Math.cos((Math.PI * 3) / 2 - delta * i * 2)}px`;
 
-        leftSlide.style.top = `${-b * Math.sin((Math.PI * 3) / 2 - delta * i * 2)}px`
+        leftSlide.style.bottom = `${-b * Math.sin((Math.PI * 3) / 2 - delta * i * 2)}px`
       }
 
       const rightSlide = document.querySelector(`.header__slider-item[data-order="${activeSlide + i}"]`);
@@ -50,7 +49,7 @@ const headerSlider = (block, items, prev, next) => {
         rightSlide.style.opacity = 1 - (3 * i) / slides.length;
         rightSlide.style.left = `${width / 2 + a * Math.cos((Math.PI * 3) / 2 + delta * i * 2)}px`;
 
-        rightSlide.style.top = `${-b * Math.sin((Math.PI * 3) / 2 + delta * i * 2)}px`
+        rightSlide.style.bottom = `${-b * Math.sin((Math.PI * 3) / 2 + delta * i * 2)}px`
       }
     }
   }

@@ -174,13 +174,21 @@ body {
   &__arrow-prev {
     border: none;
     background: transparent;
-
+    transition: all .3s;
   }
+
+  &__arrow-next:active,
+  &__arrow-prev:active {
+    path {
+      fill: #fff;
+    }
+  }
+
 
 
   &__slider {
     position: relative;
-    transform: translateY(50px);
+    transform: translateY(50%);
     height: 550px;
   }
 
