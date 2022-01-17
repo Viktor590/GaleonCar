@@ -37,7 +37,7 @@ const headerSlider = (block, items, prev, next) => {
 
       if (leftSlide) {
         leftSlide.style.zIndex = slides.length - i;
-        leftSlide.style.opacity = 1 - (1.2 * i) / slides.length;
+        leftSlide.style.opacity = 1 - (3 * i) / slides.length;
         leftSlide.style.left = `${width / 2 + a * Math.cos((Math.PI * 3) / 2 - delta * i * 2)}px`;
 
         leftSlide.style.top = `${-b * Math.sin((Math.PI * 3) / 2 - delta * i * 2)}px`
