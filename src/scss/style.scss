@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'fonts';
 @import 'vars';
+@import 'global';
 
 body {
   font-size: 18px;
@@ -154,7 +155,7 @@ body {
     font-size: 36px;
     font-weight: 400;
     line-height: 42px;
-    color: #fff;
+    color: $text-color;
     margin: 18px 0;
   }
 
@@ -198,6 +199,45 @@ body {
     height: 400px;
     transition: all .6s;
   }
+}
+
+
+.types {
+  background: $bg-burger-menu;
+  padding: 80px 0 140px;
+
+  &__cards-inner {
+    display: flex;
+    margin-top: 60px;
+  }
+
+  &__cards-item:hover {
+    .types__cards-inner__dscr {
+      opacity: 1;
+    }
+  }
+
+  &__cards-inner__dscr {
+    height: 100%;
+    transform: translateY(-113%);
+    transition: all .3s;
+    opacity: 0;
+  }
+
+  &__cards-dscr__btn {
+    display: inline-block;
+    width: 222px;
+    border: 1px solid $text-color;
+    border-radius: 6px;
+    padding: 10px 0;
+    transform: translateY(-200%);
+    transition: all .3s;
+  }
+
+  &__cards-dscr__btn:hover {
+    background: $title-color
+  }
+
 }
 
 @import 'media';

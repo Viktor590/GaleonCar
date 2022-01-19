@@ -25,6 +25,24 @@
       line-height: 82px;
     }
   }
+
+  .types {
+    padding-bottom: 100px;
+
+    &__cards-inner__dscr {
+      transform: translateY(-120%);
+    }
+
+    &__cards-dscr {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 20px 10px;
+    }
+
+    &__cards-dscr__btn {
+      transform: translateY(-150%);
+    }
+  }
 }
 
 @media(max-width:1001px) {
@@ -52,6 +70,12 @@
       line-height: 61px;
     }
 
+  }
+
+  .types {
+    &__cards-inner__dscr {
+      display: none;
+    }
   }
 }
 
@@ -105,49 +129,90 @@
     &__market {
       display: none;
     }
+
   }
 
-  @media(max-width:420px) {
-    .header {
-      &__top-wrapper {
-        height: 64px;
-      }
+  .types {
+    &__cards-inner {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 25px;
+    }
 
-      &__contacts-phone {
-        font-size: 15px;
-      }
-
-      &__burger-img {
-        padding: 12px;
-      }
-
-      &__slider-wrapper {
-        padding-top: 60px;
-      }
-
-      &__slider-dscr {
-        font-size: 18px;
-        line-height: 20px;
-      }
-
-      &__slider-title {
-        font-size: 26px;
-        line-height: 33px;
-        margin-bottom: 25px;
-      }
-
-      &__slider-item {
-        width: 350px;
-        height: 240px;
-      }
+    &__cards-item {
+      width: 430px;
+      height: 260px;
+      margin-bottom: 24px;
     }
   }
+}
 
-  @media(max-width:340px) {
-    .header {
-      &__slider {
-        transform: translateY(20%);
-      }
+@media(max-width:420px) {
+  .header {
+    &__top-wrapper {
+      height: 64px;
+    }
+
+    &__contacts-phone {
+      font-size: 15px;
+    }
+
+    &__burger-img {
+      padding: 12px;
+    }
+
+    &__slider-wrapper {
+      padding-top: 60px;
+    }
+
+    &__slider-dscr {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    &__slider-title {
+      font-size: 26px;
+      line-height: 33px;
+      margin-bottom: 25px;
+    }
+
+    &__slider-item {
+      width: 350px;
+      height: 210px;
+    }
+
+  }
+
+  .types {
+    padding: 40px 0 60px;
+
+    &__cards-item {
+      width: 320px;
+      height: 212px;
+      margin-bottom: 11px;
+    }
+
+    &__cards-dscr__btn {
+      font-size: 14px;
+    }
+
+  }
+
+  .dscr {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media(max-width:340px) {
+  .header {
+    &__slider {
+      transform: translateY(20%);
     }
   }
 }

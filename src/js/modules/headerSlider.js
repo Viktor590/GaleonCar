@@ -32,7 +32,7 @@ const headerSlider = (block, items, prev, next) => {
     const delta = Math.PI / slides.length / 4;
 
     for (let i = 0; i < slides.length; i++) {
-      const leftSlide = document.querySelector(`.header__slider-item[data-order="${activeSlide - i}"]`);
+      const leftSlide = document.querySelector(`${items}[data-order="${activeSlide - i}"]`);
 
       if (leftSlide) {
         leftSlide.style.zIndex = slides.length - i;
@@ -42,7 +42,7 @@ const headerSlider = (block, items, prev, next) => {
         leftSlide.style.bottom = `${-b * Math.sin((Math.PI * 3) / 2 - delta * i * 2)}px`
       }
 
-      const rightSlide = document.querySelector(`.header__slider-item[data-order="${activeSlide + i}"]`);
+      const rightSlide = document.querySelector(`${items}[data-order="${activeSlide + i}"]`);
 
       if (rightSlide) {
         rightSlide.style.zIndex = slides.length - i;
