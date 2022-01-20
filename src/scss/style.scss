@@ -271,20 +271,23 @@ body {
   }
 
   &__arrow-left {
-    padding-right: 20px;
+    margin-right: 20px;
   }
 
   &__cards__wrapper {
     width: 100%;
     display: flex;
+
   }
 
   &__cards-item {
     width: 100%;
+    transition: all .8s;
   }
 
   &__cards-img {
     width: 100%;
+    transition: all .7s;
   }
 
   &__cards-btn {
