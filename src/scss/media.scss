@@ -77,6 +77,14 @@
       display: none;
     }
   }
+
+  .cars {
+    padding: 60px 0;
+
+    &__slider-navigation {
+      display: none;
+    }
+  }
 }
 
 @media(max-width: 769px) {
@@ -145,6 +153,8 @@
       margin-bottom: 24px;
     }
   }
+
+
 }
 
 @media(max-width:420px) {

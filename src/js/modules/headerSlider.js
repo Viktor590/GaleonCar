@@ -71,8 +71,5 @@ const headerSlider = (block, items, prev, next) => {
   }
 
 
-
-
-
 }
 export default headerSlider;

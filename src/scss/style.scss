@@ -274,15 +274,13 @@ body {
     margin-right: 20px;
   }
 
-  &__cards__wrapper {
+  &__cards-wrapper {
     width: 100%;
     display: flex;
-
   }
 
   &__cards-item {
     width: 100%;
-    transition: all .8s;
   }
 
   &__cards-img {
