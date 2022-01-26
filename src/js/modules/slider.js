@@ -26,9 +26,10 @@ const slider = (prev, next, slide, wrapper) => {
       el.style.display = 'none';
     })
 
+
+    slides[n].style.display = 'block';
     slides[n + 1].style.display = 'block';
     slides[n - 1].style.display = 'block';
-    slides[n].style.display = 'block';
 
     if (media.matches) {
       slides.forEach((el) => {

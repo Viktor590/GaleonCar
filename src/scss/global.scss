@@ -3,6 +3,7 @@
   line-height: 29px;
   text-align: center;
   color: $text-color;
+  text-transform: uppercase;
 }
 
 .title {
@@ -11,6 +12,7 @@
   font-weight: 700;
   text-align: center;
   color: $title-color;
+  text-transform: uppercase;
 }
 
 .cards {
@@ -32,6 +34,7 @@
   border-radius: 6px;
   padding: 10px 0;
   transform: translateY(-100px);
+  text-transform: uppercase;
 }
 
 .cards-dscr {
