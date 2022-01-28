@@ -79,7 +79,7 @@
   }
 
   .cars {
-    padding: 60px 0;
+    padding: 60px 0 0;
 
     &__slider-navigation {
       display: none;
@@ -154,6 +154,48 @@
     }
   }
 
+  .rent {
+    padding: 80px 0;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__wrapper {
+      flex-wrap: wrap-reverse;
+    }
+
+    &__tabs-wrapper {
+      width: 95%;
+      margin-right: 0;
+    }
+
+    &__terms-wrapper {
+      width: 95%;
+      margin-bottom: 60px;
+    }
+
+    &__terms-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__terms-item {
+      padding: 10px 0 0 10px;
+    }
+
+    &__terms-item:first-child,
+    &__terms-item:last-child {
+      padding: 10px 0 0 10px;
+    }
+
+    &__terms-item__dscr,
+    &__terms-item__title {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
 
 }
 
@@ -216,6 +258,33 @@
   .title {
     font-size: 24px;
     line-height: 30px;
+  }
+
+  .rent {
+    padding: 30px 0;
+
+    &__title {
+      margin-bottom: 25px;
+    }
+
+    &__tabs-wrapper {
+      width: 100%;
+    }
+
+    &__terms-wrapper {
+      width: 100%;
+    }
+
+    &__terms-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__terms-item__dscr,
+    &__terms-item__title {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }
 

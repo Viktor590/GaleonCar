@@ -5,10 +5,10 @@ const slider = (prev, next, slide, wrapper) => {
   const block = document.querySelector(wrapper)
   block.addEventListener('touchstart', handleTouchStart);
   block.addEventListener('touchmove', handleTouchMove);
-
   const media = window.matchMedia('(max-width: 769px)')
 
   let slideIndex = 1;
+
   let x1 = null;
 
   showSlides(slideIndex);
@@ -62,19 +62,19 @@ const slider = (prev, next, slide, wrapper) => {
   function handleTouchStart(e) {
     const touch = e.touches[0]
     x1 = touch.clientX;
+    // console.log(x1);
   }
+
 
   function handleTouchMove(e) {
     let x2 = e.touches[0].clientX;
-
+    // console.log(x2);
     let xRes = x2 - x1;
-
     if (xRes < 0) {
       plusSlides(-1);
-    } else if (xRes > 0) {
+    }
+    if (xRes > 0) {
       plusSlides(1);
-    } else {
-      return
     }
   }
 

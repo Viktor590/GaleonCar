@@ -315,6 +315,8 @@ body {
 
   &__tabs-wrapper {
     width: 60%;
+    margin-right: 20px;
+
   }
 
   &__tabs-item {
@@ -327,6 +329,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
   }
 
   &__item-title {
@@ -334,11 +337,6 @@ body {
     line-height: 21px;
     color: $text-color;
     text-transform: uppercase;
-    // padding-bottom: 24px;
-  }
-
-  &__item-novisibility {
-    display: none;
   }
 
   &__item-dscr {
@@ -354,12 +352,12 @@ body {
   }
 
   &__terms-wrapper {
-    padding: 20px 0;
+    height: fit-content;
+    border: 1px solid $title-color;
   }
 
   &__terms-list {
     background: #232731;
-    outline: 1px solid $title-color;
   }
 
   &__terms-item:first-child {

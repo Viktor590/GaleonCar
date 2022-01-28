@@ -1,6 +1,7 @@
 import burger from './modules/burger.js';
 import headerSlider from './modules/headerSlider.js'
 import slider from './modules/slider.js';
+import tabs from './modules/tabs.js';
 
 
 
@@ -13,4 +14,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
   slider('.cars__arrow-left', '.cars__arrow-right', '.cars__cards-item', '.cars__cards-wrapper');
 
+  tabs('.rent__tabs-list', '.rent__item-visibility', '.rent__item-arrow', '.rent__item-novisibility');
 })
