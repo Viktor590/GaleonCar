@@ -268,6 +268,7 @@ body {
     position: absolute;
     right: 15%;
     top: 20%;
+    display: flex;
   }
 
   &__arrow-left {
@@ -392,6 +393,87 @@ body {
     text-align: left;
     max-width: 205px;
     padding-left: 35px;
+  }
+}
+
+.reviews {
+  background: $bg-burger-menu;
+  padding: 140px 0 70px;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__tabs-navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  &__arrow-left {
+    margin-right: 30px;
+  }
+
+  &__tabs {
+    background: $bg-color;
+    display: flex;
+    overflow: hidden;
+    padding: 20px 0;
+    margin-bottom: 65px;
+  }
+
+  &__tabs-card {
+    margin-right: 150px;
+    display: flex;
+
+  }
+
+  &__card-img {
+    width: 58px;
+    height: 58px;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+
+  &__contacts-name {
+    font-weight: 700;
+    line-height: 21px;
+    color: $text-color;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  &__contacts-city {
+    font-size: 16px;
+    line-height: 25px;
+    color: $text-color;
+    width: 128px;
+    opacity: .8;
+  }
+
+  &__content-cards {
+    display: flex;
+  }
+
+  &__cards-text {
+    margin-right: 100px;
+  }
+
+  &__text-name {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43px;
+    color: $text-color;
+    text-align: left;
+    margin-bottom: 18px;
+  }
+
+  &__text-dscr {
+    font-size: 16px;
+    line-height: 25px;
+    color: $text-color;
+    text-align: left;
+    opacity: .8;
   }
 }
 

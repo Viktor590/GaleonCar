@@ -6,7 +6,7 @@ const slider = (prev, next, slide, wrapper) => {
   block.addEventListener('touchstart', handleTouchStart);
   block.addEventListener('touchmove', handleTouchMove);
   const media = window.matchMedia('(max-width: 769px)')
-
+  console.log(slides);
   let slideIndex = 1;
 
   let x1 = null;
@@ -14,12 +14,13 @@ const slider = (prev, next, slide, wrapper) => {
   showSlides(slideIndex);
 
   function showSlides(n) {
-    if (n - 1 < 0) {
-      n = slides.length - 1;
+
+    if (n < 1) {
+      slideIndex = slides.length - 2;
     }
 
-    if (n + 1 > slides.length - 1) {
-      n = 1
+    if (n >= slides.length - 1) {
+      slideIndex = 1
     }
 
     slides.forEach((el) => {
@@ -27,9 +28,9 @@ const slider = (prev, next, slide, wrapper) => {
     })
 
 
-    slides[n].style.display = 'block';
-    slides[n + 1].style.display = 'block';
-    slides[n - 1].style.display = 'block';
+    slides[slideIndex].style.display = 'block';
+    slides[slideIndex + 1].style.display = 'block';
+    slides[slideIndex - 1].style.display = 'block';
 
     if (media.matches) {
       slides.forEach((el) => {
@@ -45,9 +46,9 @@ const slider = (prev, next, slide, wrapper) => {
     showSlides(slideIndex += n)
   }
 
-  setInterval(() => {
-    plusSlides(1)
-  }, 3000)
+  // setInterval(() => {
+  //   plusSlides(1)
+  // }, 3000)
 
 
 
