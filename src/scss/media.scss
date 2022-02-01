@@ -43,6 +43,32 @@
       transform: translateY(-150%);
     }
   }
+
+  .reviews {
+    padding: 80px 0 30px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__tabs-card {
+      margin-right: 100px;
+    }
+
+    &__cards-text {
+      margin-right: 50px;
+    }
+
+    &__text-name {
+      font-size: 24px;
+      line-height: 28/px;
+    }
+
+    &__text-dscr {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
 }
 
 @media(max-width:1001px) {
@@ -84,6 +110,11 @@
     &__slider-navigation {
       display: none;
     }
+  }
+
+  iframe {
+    width: 300px;
+    height: 200px;
   }
 }
 
@@ -196,6 +227,11 @@
     }
   }
 
+  .reviews {
+    &__content-cards {
+      flex-wrap: wrap;
+    }
+  }
 
 }
 

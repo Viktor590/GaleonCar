@@ -175,6 +175,7 @@ body {
   &__arrow-prev {
     border: none;
     background: transparent;
+    cursor: pointer;
     transition: all .3s;
   }
 
@@ -269,6 +270,12 @@ body {
     right: 15%;
     top: 20%;
     display: flex;
+    user-select: none;
+  }
+
+  &__arrow-left,
+  &__arrow-right {
+    cursor: pointer;
   }
 
   &__arrow-left {
@@ -410,12 +417,17 @@ body {
     margin-bottom: 30px;
   }
 
+  &__arrow-left,
+  &__arrow-right {
+    user-select: none;
+    cursor: pointer;
+  }
+
   &__arrow-left {
     margin-right: 30px;
   }
 
   &__tabs {
-    background: $bg-color;
     display: flex;
     overflow: hidden;
     padding: 20px 0;
@@ -425,7 +437,8 @@ body {
   &__tabs-card {
     margin-right: 150px;
     display: flex;
-
+    cursor: pointer;
+    user-select: none;
   }
 
   &__card-img {
@@ -433,6 +446,7 @@ body {
     height: 58px;
     margin-right: 8px;
     border-radius: 50%;
+    object-fit: cover;
   }
 
   &__contacts-name {

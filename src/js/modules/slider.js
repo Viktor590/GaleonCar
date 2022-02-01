@@ -6,7 +6,7 @@ const slider = (prev, next, slide, wrapper) => {
   block.addEventListener('touchstart', handleTouchStart);
   block.addEventListener('touchmove', handleTouchMove);
   const media = window.matchMedia('(max-width: 769px)')
-  console.log(slides);
+
   let slideIndex = 1;
 
   let x1 = null;
@@ -61,8 +61,7 @@ const slider = (prev, next, slide, wrapper) => {
   })
 
   function handleTouchStart(e) {
-    const touch = e.touches[0]
-    x1 = touch.clientX;
+    x1 = e.touches[0].clientX
     // console.log(x1);
   }
 
