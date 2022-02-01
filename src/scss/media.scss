@@ -61,7 +61,7 @@
 
     &__text-name {
       font-size: 24px;
-      line-height: 28/px;
+      line-height: 28px;
     }
 
     &__text-dscr {
@@ -112,7 +112,7 @@
     }
   }
 
-  iframe {
+  .video {
     width: 300px;
     height: 200px;
   }
@@ -228,8 +228,33 @@
   }
 
   .reviews {
+    padding: 40px 0 20px;
+
+    &__title {
+      margin-bottom: 15px;
+    }
+
     &__content-cards {
       flex-wrap: wrap;
+      justify-content: center;
+    }
+
+
+    &__tabs-navigation {
+      display: none;
+    }
+
+    &__tabs {
+      margin-bottom: 10px;
+    }
+
+    &__cards-text {
+      margin-right: 0;
+    }
+
+    &__text-dscr {
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 

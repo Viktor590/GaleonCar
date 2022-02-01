@@ -68,8 +68,9 @@ const slider = (prev, next, slide, wrapper) => {
 
   function handleTouchMove(e) {
     let x2 = e.touches[0].clientX;
-    // console.log(x2);
-    let xRes = x2 - x1;
+    console.log(x2);
+    let xRes = x1 - x2;
+    // console.log(xRes);
     if (xRes < 0) {
       plusSlides(-1);
     }

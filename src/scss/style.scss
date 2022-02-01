@@ -491,4 +491,137 @@ body {
   }
 }
 
+.map {
+  width: 100%;
+}
+
+.maps {
+  &__box {
+    position: relative;
+  }
+
+  &__contact {
+    padding: 20px 45px;
+    position: absolute;
+    background: #232731;
+    box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.15);
+  }
+
+  &__contact-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contact-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $text-color;
+    text-transform: uppercase;
+  }
+
+  &__contact-dscr {
+    font-size: 16px;
+    line-height: 25px;
+    color: $text-color;
+    opacity: .7;
+  }
+
+  &__contact-adres,
+  &__contact-mail {
+    font-size: 14px;
+    line-height: 16px;
+    color: $text-color;
+    opacity: .7;
+    margin-top: 45px;
+    margin-left: 30px;
+  }
+
+  &__contact-adres__title,
+  &__contact-mail__title {
+    font-size: 16px;
+    line-height: 19px;
+    color: $text-color;
+    margin-left: 30px;
+    position: relative;
+  }
+
+  &__contact-adres__title::after {
+    content: '';
+    position: absolute;
+    background-image: url('@img/icons/location.svg');
+    width: 31px;
+    height: 30px;
+    top: -10px;
+    left: -40px;
+  }
+
+  &__contact-mail__title::after {
+    content: '';
+    position: absolute;
+    background-image: url('@img/icons/email.svg');
+    width: 26px;
+    height: 30px;
+    top: -10px;
+    left: -40px;
+  }
+
+  &__contact-bottom {
+    margin: 50px 0 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contact-btn {
+    width: 222px;
+    height: 48px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    color: $text-color;
+    text-transform: uppercase;
+    border: 1px solid $text-color;
+    border-radius: 6px;
+    background: #232731;
+    box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    margin-right: 65px;
+  }
+
+  &__contact-tel {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    color: $text-color;
+  }
+
+  &__contact-bottom__dscr {
+    font-size: 14px;
+    line-height: 17px;
+    color: $text-color;
+    opacity: .7;
+  }
+
+  &__contact-social {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contact-social__title {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  &__bottom-social__block {
+    display: flex;
+  }
+
+  &__bottom-social__link {
+    margin-right: 20px;
+  }
+}
+
+
 @import 'media';

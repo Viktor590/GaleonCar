@@ -4,6 +4,7 @@ const tabSlide = () => {
   const arrowRight = document.querySelector('.reviews__arrow-right')
   const content = document.querySelectorAll('.reviews__content-cards');
   const block = document.querySelector('.reviews__tabs');
+  const media = window.matchMedia('(max-width: 769px)')
   block.addEventListener('touchstart', handleTouchStart);
   block.addEventListener('touchmove', handleTouchMove);
 
