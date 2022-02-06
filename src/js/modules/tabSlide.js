@@ -1,26 +1,25 @@
-const tabSlide = () => {
-  const tabs = document.querySelectorAll('.reviews__tabs-card');
-  const arrowLeft = document.querySelector('.reviews__arrow-left');
-  const arrowRight = document.querySelector('.reviews__arrow-right')
-  const content = document.querySelectorAll('.reviews__content-cards');
-  const block = document.querySelector('.reviews__tabs');
-  const media = window.matchMedia('(max-width: 769px)')
+const tabSlide = (tabsBlock, arrowPrev, arrowNext, textContent, container) => {
+  const tabs = document.querySelectorAll(tabsBlock);
+  const arrowLeft = document.querySelector(arrowPrev);
+  const arrowRight = document.querySelector(arrowNext)
+  const content = document.querySelectorAll(textContent);
+  const block = document.querySelector(container);
   block.addEventListener('touchstart', handleTouchStart);
   block.addEventListener('touchmove', handleTouchMove);
 
-  let res = -1960;
 
   let slideIndex = 1;
   let transform = 0;
   const stepTransform = 280;
   let x1 = null;
+  let res = -(block.scrollWidth - stepTransform);
+
 
   hideTabs(transform)
   showTabs(slideIndex);
 
   function hideTabs(i) {
-    let a = Math.max(res, i,)
-    // console.log(a);
+    let a = Math.max(i, res)
     tabs.forEach(el => {
       el.style.opacity = '.4';
       el.style.transform = `translateX(${a}px)`
@@ -55,13 +54,11 @@ const tabSlide = () => {
   function handleTouchStart(e) {
     const touch = e.touches[0]
     x1 = touch.clientX;
-    // console.log(x1);
   }
 
   function handleTouchMove(e) {
     let x2 = e.touches[0].clientX;
     let diff = -Math.round((x1 - x2) / 15);
-    // console.log(diff);
     hideTabs(transform += diff)
   }
 

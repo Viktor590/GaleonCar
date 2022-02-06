@@ -222,9 +222,9 @@
               ночному городу или арендовать автомобиль на свадьбу.
 
             </p>
-            <a class="types__cards-dscr__btn cards-btn" href="#">
+            <button class="types__cards-dscr__btn cards-btn">
               ЗАКАЗАТЬ МАШИНУ
-            </a>
+            </button>
           </div>
 
         </div>
@@ -243,9 +243,9 @@
               ночному городу или арендовать автомобиль на свадьбу.
 
             </p>
-            <a class="types__cards-dscr__btn cards-btn" href="#">
+            <button class="types__cards-dscr__btn cards-btn">
               ЗАКАЗАТЬ МАШИНУ
-            </a>
+            </button>
           </div>
         </div>
         <div class="types__cards-item cards">
@@ -264,9 +264,9 @@
               ночному городу или арендовать автомобиль на свадьбу.
 
             </p>
-            <a class="types__cards-dscr__btn cards-btn" href="#">
+            <button class="types__cards-dscr__btn cards-btn">
               ЗАКАЗАТЬ МАШИНУ
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -298,36 +298,36 @@
 
         <div class="cars__cards-item cards">
           <img class="cars__cards-img cards-img" src="@img/cars/bantley.jpg" alt="photo">
-          <a class="cars__cards-btn cards-btn" href="#">
+          <button class="cars__cards-btn cards-btn">
             ЗАКАЗАТЬ МАШИНУ
-          </a>
+          </button>
         </div>
 
         <div class="cars__cards-item cards">
           <img class="cars__cards-img cards-img" src="@img/cars/audi2.jpg" alt="photo">
-          <a class="cars__cards-btn cards-btn" href="#">
+          <button class="cars__cards-btn cards-btn">
             ЗАКАЗАТЬ МАШИНУ
-          </a>
+          </button>
         </div>
 
         <div class="cars__cards-item cards">
           <img class="cars__cards-img cards-img" src="@img/cars/audi.jpg" alt="photo">
-          <a class="cars__cards-btn cards-btn" href="#">
+          <button class="cars__cards-btn cards-btn">
             ЗАКАЗАТЬ МАШИНУ
-          </a>
+          </button>
         </div>
 
         <div class="cars__cards-item cards">
           <img class="cars__cards-img cards-img" src="@img/cars/bantley.jpg" alt="photo">
-          <a class="cars__cards-btn cards-btn" href="#">
+          <button class="cars__cards-btn cards-btn">
             ЗАКАЗАТЬ МАШИНУ
-          </a>
+          </button>
         </div>
         <div class="cars__cards-item cards">
           <img class="cars__cards-img cards-img" src="@img/cars/audi.jpg" alt="photo">
-          <a class="cars__cards-btn cards-btn" href="#">
+          <button class="cars__cards-btn cards-btn">
             ЗАКАЗАТЬ МАШИНУ
-          </a>
+          </button>
         </div>
 
 
@@ -903,9 +903,12 @@
 
   <section class="maps">
     <div class="maps__box">
-      <iframe class="map"
+      <!-- <iframe class="map"
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d64136.69159164217!2d30.342048556589475!3d59.844629299754764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1643728195009!5m2!1sru!2sru"
-        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+      <button class="maps__btn-contact">
+        <img class="maps__btn-img" src="@img/pin1.png" alt="">
+      </button>
       <div class="maps__contact">
         <div class="maps__contact-top">
           <h2 class="maps__contact-title">
@@ -967,6 +970,35 @@
       </div>
     </div>
   </section>
+
+
+  <div class="form">
+    <div class="form__wrapper">
+      <div class="maps__contact-top form__top">
+        <h2 class="maps__contact-title">
+          контакты
+        </h2>
+        <img class="form-close" src="@img/icons/close.svg" alt="close">
+      </div>
+      <input class="form__input" type="text" placeholder="Ваше Имя и Фамилия" name="name">
+      <input class="form__input" type="tel" placeholder="+79771111111" name="tel">
+      <select class="form__select" name="type__rent">
+        <option class="form__select-option" selected="selected" disabled>Вид аренды</option>
+        <option class="form__select-option">С ВОДИТЕЛЕМ</option>
+        <option class="form__select-option">БЕЗ водителя</option>
+        <option class="form__select-option">Для особых Целей</option>
+      </select>
+      <select class="form__select" name="type__car">
+        <option class="form__select-option" selected="selected" disabled>Тип автомобиля</option>
+        <option class="form__select-option">ПРЕМИУМ</option>
+        <option class="form__select-option">бизнес</option>
+        <option class="form__select-option">СПОРТ</option>
+      </select>
+
+      <button class="form__btn">Заказать</button>
+    </div>
+
+  </div>
 
   <script src="js/app.min.js"></script>
 </body>

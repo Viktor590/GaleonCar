@@ -3,6 +3,7 @@ import headerSlider from './modules/headerSlider.js'
 import slider from './modules/slider.js';
 import tabs from './modules/tabs.js';
 import tabSlide from './modules/tabSlide.js'
+import modal from './modules/modal.js'
 
 
 
@@ -17,5 +18,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   tabs('.rent__tabs-list', '.rent__item-visibility', '.rent__item-arrow', '.rent__item-novisibility');
 
-  tabSlide();
+  tabSlide('.reviews__tabs-card', '.reviews__arrow-left',
+    '.reviews__arrow-right',
+    '.reviews__content-cards',
+    '.reviews__tabs');
+
+  modal();
 })

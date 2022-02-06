@@ -7,6 +7,7 @@ body {
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  position: relative;
 }
 
 .container {
@@ -496,15 +497,39 @@ body {
 }
 
 .maps {
+  background-image: url('@img/map.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+
   &__box {
     position: relative;
+    height: 100%;
+  }
+
+  &__btn-contact {
+    background: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    left: 30%;
   }
 
   &__contact {
     padding: 20px 45px;
     position: absolute;
+    top: 15%;
+    right: 15%;
     background: #232731;
     box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.15);
+    display: none;
+  }
+
+  &__contact.active {
+    display: block;
   }
 
   &__contact-top {
@@ -518,6 +543,10 @@ body {
     font-weight: 700;
     color: $text-color;
     text-transform: uppercase;
+  }
+
+  &__contact-close {
+    cursor: pointer;
   }
 
   &__contact-dscr {
@@ -620,6 +649,56 @@ body {
 
   &__bottom-social__link {
     margin-right: 20px;
+  }
+}
+
+.form {
+  display: none;
+  position: fixed;
+  background: $bg-color;
+  max-width: 450px;
+  padding: 40px;
+  top: 30%;
+  left: 40%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+
+  }
+
+  &__top {
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__select {
+    margin-bottom: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    color: $text-color;
+    font-size: 16px;
+    line-height: 26px;
+    border: 1px solid $text-color;
+    border-radius: 6px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    background: inherit;
+    cursor: pointer;
+    transition: all .3s;
+  }
+
+  &__btn:hover {
+    background: $title-color;
   }
 }
 
