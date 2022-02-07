@@ -23,5 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
     '.reviews__content-cards',
     '.reviews__tabs');
 
-  modal();
+  modal('.maps__contact-btn', '.form-close', '.form__inner');
+  modal('.cards-btn', '.form-close', '.form__inner');
 })

@@ -1,12 +1,16 @@
-const modal = () => {
+const modal = (showBtn, handlerCloseForm, formWrapper) => {
+  const modalBtn = document.querySelectorAll(showBtn)
+  const closeForm = document.querySelector(handlerCloseForm)
+  const form = document.querySelector(formWrapper);
   const btn = document.querySelector('.maps__btn-contact');
   const contactBlock = document.querySelector('.maps__contact');
   const closeBtn = document.querySelector('.maps__contact-close');
-  const modalBtn = document.querySelectorAll('.maps__contact-btn')
-  const body = document.querySelector('body')
+
+
+  let scrollSize = window.innerWidth - document.documentElement.clientWidth
 
   btn.addEventListener('click', () => {
-    contactBlock.classList.toggle('active')
+    contactBlock.classList.add('active')
   });
 
   closeBtn.addEventListener('click', () => {
@@ -15,20 +19,23 @@ const modal = () => {
 
   modalBtn.forEach((el) => {
     el.addEventListener('click', () => {
-      const modal = document.createElement('div')
-      modal.classList.add('modal');
-      modal.style.cssText = `
-        width: 500px;
-        height: 500px;
-        z-index: 100;
-        background: #ccc;
-        position: fixed;
-        top: 30%;
-        left: 35%; 
+      form.style.display = 'block'
+      document.body.style.cssText = `
+        overflow: hidden;
+        margin-right: ${scrollSize}px;
       `;
-      body.style.overflow = 'hidden'
-      body.append(modal)
+      closeForm.style.cursor = 'pointer';
+      contactBlock.classList.remove('active')
     })
   })
+
+  closeForm.addEventListener('click', () => {
+    form.style.display = '';
+    document.body.style.cssText = `
+      overflow: '';
+      margin-right: 0
+    `
+  })
+
 }
 export default modal;

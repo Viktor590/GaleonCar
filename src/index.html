@@ -972,34 +972,38 @@
   </section>
 
 
-  <div class="form">
-    <div class="form__wrapper">
-      <div class="maps__contact-top form__top">
-        <h2 class="maps__contact-title">
-          контакты
-        </h2>
-        <img class="form-close" src="@img/icons/close.svg" alt="close">
-      </div>
-      <input class="form__input" type="text" placeholder="Ваше Имя и Фамилия" name="name">
-      <input class="form__input" type="tel" placeholder="+79771111111" name="tel">
-      <select class="form__select" name="type__rent">
-        <option class="form__select-option" selected="selected" disabled>Вид аренды</option>
-        <option class="form__select-option">С ВОДИТЕЛЕМ</option>
-        <option class="form__select-option">БЕЗ водителя</option>
-        <option class="form__select-option">Для особых Целей</option>
-      </select>
-      <select class="form__select" name="type__car">
-        <option class="form__select-option" selected="selected" disabled>Тип автомобиля</option>
-        <option class="form__select-option">ПРЕМИУМ</option>
-        <option class="form__select-option">бизнес</option>
-        <option class="form__select-option">СПОРТ</option>
-      </select>
+  <div class="form__inner">
+    <div class="form">
+      <div class="form__wrapper">
+        <div class="maps__contact-top form__top">
+          <h2 class="maps__contact-title">
+            контакты
+          </h2>
+          <img class="form-close" src="@img/icons/close.svg" alt="close">
+        </div>
+        <form name="contact">
+          <input class="form__input" type="text" placeholder="Ваше Имя и Фамилия" name="name">
+          <input class="form__input" type="tel" placeholder="+79771111111" name="tel">
+          <select class="form__select" name="type__rent">
+            <option class="form__select-option" selected="selected" disabled>Вид аренды</option>
+            <option class="form__select-option">С ВОДИТЕЛЕМ</option>
+            <option class="form__select-option">БЕЗ водителя</option>
+            <option class="form__select-option">Для особых Целей</option>
+          </select>
+          <select class="form__select" name="type__car">
+            <option class="form__select-option" selected="selected" disabled>Тип автомобиля</option>
+            <option class="form__select-option">ПРЕМИУМ</option>
+            <option class="form__select-option">бизнес</option>
+            <option class="form__select-option">СПОРТ</option>
+          </select>
 
-      <button class="form__btn">Заказать</button>
+          <button class="form__btn">Заказать</button>
+        </form>
+      </div>
+
     </div>
 
   </div>
-
   <script src="js/app.min.js"></script>
 </body>
 
