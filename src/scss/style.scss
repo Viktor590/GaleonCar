@@ -3,6 +3,10 @@
 @import 'vars';
 @import 'global';
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
@@ -711,6 +715,39 @@ body {
 
   &__btn:hover {
     background: $title-color;
+  }
+}
+
+.footer {
+  background: $bg-color;
+  padding: 30px 0;
+
+  display: flex;
+  justify-content: center;
+
+  &__logo {
+    margin: 0 auto;
+  }
+
+  &__list {
+    margin-right: 0;
+  }
+
+
+  &__dscr {
+    margin: 25px 0;
+  }
+
+  &__privacy {
+    font-size: 16px;
+    line-height: 25px;
+    color: $text-color;
+    opacity: .5;
+  }
+
+  &__social {
+    justify-content: center;
+    margin-top: 25px;
   }
 }
 
