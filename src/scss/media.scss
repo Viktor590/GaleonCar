@@ -29,10 +29,6 @@
   .types {
     padding-bottom: 100px;
 
-    &__cards-inner__dscr {
-      transform: translateY(-120%);
-    }
-
     &__cards-dscr {
       font-size: 14px;
       line-height: 18px;
@@ -40,7 +36,7 @@
     }
 
     &__cards-dscr__btn {
-      transform: translateY(-150%);
+      transform: translateY(-210%);
     }
   }
 
@@ -107,10 +103,6 @@
       line-height: 61px;
     }
 
-  }
-
-  .form {
-    left: 30%;
   }
 
   .types {
@@ -273,9 +265,6 @@
     }
   }
 
-  .form {
-    left: 25%;
-  }
 }
 
 @media(max-width:420px) {
@@ -399,10 +388,6 @@
       margin-bottom: 20px;
     }
   }
-
-  .form {
-    left: 5%;
-  }
 }
 
 @media(max-width:340px) {
@@ -413,7 +398,6 @@
   }
 
   .form {
-    left: 0;
 
     &__wrapper {
       width: 240px;
