@@ -58,7 +58,8 @@ const tabSlide = (tabsBlock, arrowPrev, arrowNext, textContent, container) => {
 
   function handleTouchMove(e) {
     let x2 = e.touches[0].clientX;
-    let diff = -Math.round((x1 - x2) / 15);
+    console.log(x2);
+    let diff = -Math.round((x1 - x2) / 10);
     hideTabs(transform += diff)
   }
 

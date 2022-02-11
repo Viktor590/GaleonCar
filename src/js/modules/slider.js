@@ -5,11 +5,14 @@ const slider = (prev, next, slide, wrapper) => {
   const block = document.querySelector(wrapper)
   block.addEventListener('touchstart', handleTouchStart);
   block.addEventListener('touchmove', handleTouchMove);
+  block.addEventListener('touchend', handleTouchend);
   const media = window.matchMedia('(max-width: 769px)')
 
   let slideIndex = 1;
 
   let x1 = null;
+
+  let x2 = null;
 
   showSlides(slideIndex);
 
@@ -62,21 +65,21 @@ const slider = (prev, next, slide, wrapper) => {
 
   function handleTouchStart(e) {
     x1 = e.touches[0].clientX
-    // console.log(x1);
   }
 
 
   function handleTouchMove(e) {
-    let x2 = e.touches[0].clientX;
-    console.log(x2);
-    let xRes = x1 - x2;
-    // console.log(xRes);
-    if (xRes < 0) {
+    x2 = e.touches[0].clientX;
+  }
+
+  function handleTouchend() {
+    let swipeFinal = x1 - x2;
+    if (swipeFinal > 0) {
       plusSlides(-1);
-    }
-    if (xRes > 0) {
+    } else {
       plusSlides(1);
     }
+
   }
 
 

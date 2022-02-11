@@ -7,8 +7,7 @@ const modal = (showBtn, handlerCloseForm, formWrapper) => {
   const contactBlock = document.querySelector('.maps__contact');
   const closeBtn = document.querySelector('.maps__contact-close');
 
-
-  let scrollSize = window.innerWidth - document.documentElement.clientWidth
+  let scrollSize = window.innerWidth - document.documentElement.clientWidth;
 
   btn.addEventListener('click', () => {
     contactBlock.classList.add('active')
@@ -29,7 +28,7 @@ const modal = (showBtn, handlerCloseForm, formWrapper) => {
       formBlock.style.cssText = `
         top: ${formPositionTop}px;
         left: ${formPositionLeft}px;
-      `
+      `;
 
       document.body.style.cssText = `
         overflow: hidden;

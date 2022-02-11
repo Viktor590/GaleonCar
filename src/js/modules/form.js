@@ -2,13 +2,6 @@ const form = (state) => {
   const inputs = document.querySelectorAll('.form__input');
   const forms = document.querySelector('.contact')
 
-  // const name = inputs[0].value;
-  // console.log(name);
-
-  // let message = {
-  //   success: `Спасибо ${inputs.value} , скоро свяжемся`,
-  //   failure: `Что-то пошло не так, попробуйте еще раз`
-  // }
 
   const postData = async (url, data) => {
     let res = await fetch(url, {
@@ -38,8 +31,6 @@ const form = (state) => {
     forms.appendChild(div)
 
     const formData = new FormData(forms);
-
-    // console.log(formData);
 
     for (let key in state) {
       formData.append(key, state[key])
